@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(tag, "back width = " + backW);
         Log.d(tag, "back height = " + backH);
 
-        ValueAnimator xAnimator = ValueAnimator.ofFloat(0, -backW / 2).setDuration(2 * 1000);
+        ValueAnimator xAnimator = ValueAnimator.ofFloat(0, -backW).setDuration(5 * 1000);
         xAnimator.setInterpolator(new DecelerateInterpolator());
         xAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ValueAnimator yAnimator = ValueAnimator.ofFloat(0, -backH / 2).setDuration(2 * 1000);
+        ValueAnimator yAnimator = ValueAnimator.ofFloat(0, -backH).setDuration(5 * 1000);
         yAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         yAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
